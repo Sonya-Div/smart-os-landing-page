@@ -160,6 +160,10 @@ li:hover .an {
     width: 80%;
     margin-bottom: 20px;
   }
+  .theme-btn{
+    right: 20px;
+    top: 40px;
+  }
 }
 @media (max-width:480px) {
   nav ul li {
@@ -167,6 +171,10 @@ li:hover .an {
   }
   .container header .logo {
     font-size: 3rem;
+  }
+.theme-btn{
+    right: 20px;
+    top: 40px;
   }
 }
 body.dark-mode {
