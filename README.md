@@ -39,4 +39,5 @@ An interactive, single-page website displaying the most popular operating system
 * **CSS3:** Custom layouts, gradient backgrounds, hover effects, and media queries.
 * **JavaScript (ES6+):** DOM manipulation, event listeners, functions with parameters, and Local Storage.
 * **Font Awesome:** Scalable vector icons.
+* 
 https://sonya-div.github.io/smart-os-landing-page/
