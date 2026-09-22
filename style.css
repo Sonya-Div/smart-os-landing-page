@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #7412dc9c, #3333cc);
+    animation: gradientMove 7s ease infinite;
+    background-size: 200%;
+    transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.container{
+  width: 85%;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.15); /* شبه شفاف */
+  backdrop-filter: blur(10px); /* تأثير زجاجي */
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border: 2px solid rgba(255,255,255,0.4);
+  margin:auto;
+  transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.theme-btn {
+  position: absolute;
+  top: 49px;
+  right: 40px;
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  border:1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 15px;
+  color: white;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.theme-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+.container header .logo{
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: linear-gradient(to top, #50bfe4e3, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+.container header .logo:hover{
+    text-shadow: 1px 1px 4px rgb(253, 159, 253);
+}
+nav ul{
+    list-style:none;
+     display: flex;
+    justify-content:space-evenly;
+    align-items:flex-start;
+    gap: 20px;
+}
+nav ul li{
+    background-image: linear-gradient(to top right,rgb(98, 239, 241),rgba(207, 241, 254, 0.925));
+    border-radius: 20px;
+    width: 28%;
+    padding: 20px 15px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    position: relative;
+}
+nav ul li img{
+    background: none;
+    width: 40%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+nav ul li a{
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+     background: linear-gradient(to top right, #50bfe4e3, #60e249);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+    nav ul li a:hover {
+  background: linear-gradient(to right, #00c6ff, #672bc2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+nav ul li:hover{
+    cursor:pointer;
+    background-image: linear-gradient(to top,#e1d8d8,#cf2cb1e2);
+    box-shadow: 0 0 15px 7px rgb(232, 159, 251);
+    transform: translateY(-10px) scale(1.05);
+}   
+
+.container .ap ,.container .wi ,.container .an{
+  max-height: 0;
+  transform: scale(0.9);
+  color:whitesmoke;
+  width:100%;
+  background: rgb(180, 180, 217);
+  border-radius: 15px;
+  font-size:0.95rem ;
+  padding: 0px 10px;
+  box-shadow: 0 0 15px 7px rgb(232, 159, 251) inset;
+  text-align: center;
+  opacity: 0;
+  margin-top: 0px;
+  transition: all 0.5s ease-in-out;
+}
+    
+li:hover .ap,
+li:hover .wi,
+li:hover .an {
+  max-height: 200px;
+  opacity: 1;
+  transform: scale(1);
+  margin-top: 15px;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul li {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width:480px) {
+  nav ul li {
+    width: 90%;
+  }
+  .container header .logo {
+    font-size: 3rem;
+  }
+}
+body.dark-mode {
+    background: linear-gradient(to top right, #1a1a1a, #333333);
+}
+body.dark-mode .container {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+body.dark-mode nav ul li {
+    background-image: linear-gradient(to top right, #1e1e2f, #2d2d44);
+    box-shadow: 0 0 15px 7px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+body.dark-mode nav ul li a {
+    background: linear-gradient(to top right, #ffffff, #a1a1a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.dark-mode .container header .logo {
+    background: linear-gradient(to top, #ffffff, #a1a1a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.dark-mode .container header .logo:hover{
+text-shadow: 1px 1px 4px rgba(8, 29, 160, 0.5);
+}
+body.dark-mode .container .ap,
+body.dark-mode .container .wi,
+body.dark-mode .container .an {
+    background: rgba(50, 50, 50, 0.6);
+    box-shadow: 0 0 15px 7px rgba(255, 255, 255, 0.1) inset;
+    color: #e1e1e1;
+}
+body.dark-mode .theme-btn {
+    background: rgba(144, 157, 183, 0.627);
+    border: 1px solid rgb(93, 94, 101);
+
+}
+body.dark-mode nav ul li.mac:hover {
+    background-image: linear-gradient(to top, #2b2b36, #555555);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
+}
+body.dark-mode nav ul li.wind:hover{
+    background-image: linear-gradient(to top, #1a263d, #0078d4);
+    box-shadow: 0 0 20px 5px rgba(0, 120, 212, 0.4);
+}
+body.dark-mode nav ul li.andr:hover{
+    background-image: linear-gradient(to top, #1a3328, #3ddc84);
+    box-shadow: 0 0 20px 5px rgba(61, 220, 132, 0.4);
+}
+body nav ul li.wind:hover {
+    background-image: linear-gradient(to top right, #bce7ff, #62b6ef);
+    box-shadow: 0 0 15px 7px rgba(0, 162, 237, 0.4);
+}
+
+body nav ul li.andr:hover {
+    background-image: linear-gradient(to top right, #c3fcd1, #62ef8d);
+    box-shadow: 0 0 15px 7px rgba(98, 239, 141, 0.4);
+}
+.like-container {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.like-btn{
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: black; 
+  transition: transform 0.2s ease-in-out;
+}
+.like-btn:hover{
+  transform: scale(1.25);
+}
+.like-container span {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333333;
+}
+body.dark-mode .like-container i{
+  color: white;
+}
+body.dark-mode .like-container span {
+    color: #ffffff;
+}
